@@ -1,8 +1,8 @@
 Summary: e-smith server and gateway release file
 Name: e-smith-release
-%define version 7.0alpha22
+%define version 7.0alpha23
 %define displayversion %{version}
-%define release 01
+%define release 01sme01
 Version: %{version}
 Release: %{release}
 Copyright: Mitel Networks Corporation
@@ -20,6 +20,10 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Fri Jul 1 2005 Gordon Rowell <gordonr@gormand.com.au>
+- [7.0alpha23-01sme01]
+- Bump version to 7.0alpha23
+
 * Fri Jun 24 2005 Charlie Brady <charlieb@e-smith.com>
 - [7.0alpha22-01]
 - Bump version to 7.0alpha22
