@@ -2,7 +2,7 @@ Summary: e-smith server and gateway release file
 Name: e-smith-release
 %define version 7.0alpha23
 %define displayversion %{version}
-%define release 01sme01
+%define release 01sme02
 Version: %{version}
 Release: %{release}
 Copyright: Mitel Networks Corporation
@@ -10,16 +10,23 @@ Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
 Packager: e-smith developers <bugs@e-smith.com>
 BuildArchitectures: noarch
-Epoch: 21
+Epoch: 23
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 Obsoletes: redhat-logos, redhat-release, perl-RPM
 Obsoletes: pident
 BuildRequires: perl, e-smith-devtools
+Requires: centos-release
 
 %description
 e-smith server and gateway release file
 
 %changelog
+* Sat Jul 2 2005 Gordon Rowell <gordonr@gormand.com.au>
+- [7.0alpha23-01sme02]
+- Add dependency on centos-release
+- Leave /etc/redhat-release to the centos-release package
+- TODO: Add templates for /etc/issue{,.net} 
+
 * Fri Jul 1 2005 Gordon Rowell <gordonr@gormand.com.au>
 - [7.0alpha23-01sme01]
 - Bump version to 7.0alpha23
@@ -368,13 +375,17 @@ e-smith server and gateway release file
 mkdir -p $RPM_BUILD_ROOT/etc
 echo "Mitel Networks server %{displayversion}" >\
  $RPM_BUILD_ROOT/etc/e-smith-release
-ln -sf e-smith-release $RPM_BUILD_ROOT/etc/redhat-release
-echo  > $RPM_BUILD_ROOT/etc/issue
+# ln -sf e-smith-release $RPM_BUILD_ROOT/etc/redhat-release
+# echo  > $RPM_BUILD_ROOT/etc/issue
+ln -sf issue $RPM_BUILD_ROOT/etc/issue.net
 mkdir -p $RPM_BUILD_ROOT/etc/e-smith/db/configuration/force/sysconfig
 echo "%{displayversion}" \
    > $RPM_BUILD_ROOT/etc/e-smith/db/configuration/force/sysconfig/ReleaseVersion
 /sbin/e-smith/genfilelist $RPM_BUILD_ROOT \
     > %{name}-%{version}-%{release}-filelist
+
+%post
+echo "Mitel Networks server %{displayversion}" > /etc/issue
 
 %clean
 rm -rf $RPM_BUILD_ROOT

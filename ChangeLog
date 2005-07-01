@@ -12,3 +12,8 @@ Thu Jun 30 02:39:50 2005                                       gordonr
 a23 version
 
 ----------------------------------------------------------------------
+Fri Jul  1 13:39:01 2005                                       gordonr
+
+Add dependency on centos-release and leave /etc/redhat-release to that pkg
+
+----------------------------------------------------------------------
