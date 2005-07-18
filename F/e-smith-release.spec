@@ -1,8 +1,8 @@
 Summary: e-smith server and gateway release file
 Name: e-smith-release
-%define version 7.0alpha23
+%define version 7.0alpha26
 %define displayversion %{version}
-%define release 01sme02
+%define release 01
 Version: %{version}
 Release: %{release}
 Copyright: Mitel Networks Corporation
@@ -10,26 +10,37 @@ Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
 Packager: e-smith developers <bugs@e-smith.com>
 BuildArchitectures: noarch
-Epoch: 23
+Epoch: 21
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
+Requires: centos-release
 Obsoletes: redhat-logos, redhat-release, perl-RPM
 Obsoletes: pident
 BuildRequires: perl, e-smith-devtools
-Requires: centos-release
 
 %description
 e-smith server and gateway release file
 
 %changelog
-* Sat Jul 2 2005 Gordon Rowell <gordonr@gormand.com.au>
-- [7.0alpha23-01sme02]
+* Sun Jul 17 2005 Shad L. Lords <slords@mail.com>
+- [7.0alpha26-01]
+- Bump version to 7.0alpha26
+
+* Mon Jul 11 2005 Charlie Brady <charlieb@e-smith.com>
+- [7.0alpha24-02]
+- Remove /etc/issue.net symlink, since it clashes with a file
+  in centos-release.
+
+* Mon Jul 11 2005 Charlie Brady <charlieb@e-smith.com>
+- [7.0alpha24-01]
+- Bump version to 7.0alpha24
+
+* Mon Jul 4 2005 Gordon Rowell <gordonr@gormand.com.au>
+- [7.0alpha23-01]
+- Bump version to 7.0alpha23
 - Add dependency on centos-release
 - Leave /etc/redhat-release to the centos-release package
-- TODO: Add templates for /etc/issue{,.net} 
-
-* Fri Jul 1 2005 Gordon Rowell <gordonr@gormand.com.au>
-- [7.0alpha23-01sme01]
-- Bump version to 7.0alpha23
+- Add /etc/issue.net symlink and remove /etc/issue file.
+- TODO: Add templates for /etc/issue{,.net}
 
 * Fri Jun 24 2005 Charlie Brady <charlieb@e-smith.com>
 - [7.0alpha22-01]
@@ -375,17 +386,11 @@ e-smith server and gateway release file
 mkdir -p $RPM_BUILD_ROOT/etc
 echo "Mitel Networks server %{displayversion}" >\
  $RPM_BUILD_ROOT/etc/e-smith-release
-# ln -sf e-smith-release $RPM_BUILD_ROOT/etc/redhat-release
-# echo  > $RPM_BUILD_ROOT/etc/issue
-ln -sf issue $RPM_BUILD_ROOT/etc/issue.net
 mkdir -p $RPM_BUILD_ROOT/etc/e-smith/db/configuration/force/sysconfig
 echo "%{displayversion}" \
    > $RPM_BUILD_ROOT/etc/e-smith/db/configuration/force/sysconfig/ReleaseVersion
 /sbin/e-smith/genfilelist $RPM_BUILD_ROOT \
     > %{name}-%{version}-%{release}-filelist
-
-%post
-echo "Mitel Networks server %{displayversion}" > /etc/issue
 
 %clean
 rm -rf $RPM_BUILD_ROOT
