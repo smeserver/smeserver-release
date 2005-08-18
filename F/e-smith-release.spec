@@ -2,15 +2,15 @@ Summary: e-smith server and gateway release file
 Name: e-smith-release
 %define version 7.0beta1
 %define displayversion %{version}
-%define release 00sme01
+%define release 01
 Version: %{version}
 Release: %{release}
-Copyright: Mitel Networks Corporation
+License: Mitel Networks Corporation
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
 Packager: e-smith developers <bugs@e-smith.com>
 BuildArchitectures: noarch
-Epoch: 21
+Epoch: 24
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 Requires: centos-release
 Obsoletes: redhat-logos, redhat-release, perl-RPM
@@ -21,8 +21,12 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
-* Sun Jul 31 2005 Shad L. Lords <slords@mail.com> 7.0beta1-00sme01
+* Wed Aug 17 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta1-01
 - Bump version to 7.0beta1
+- Increase Epoch to be sure to trump any 6.1 or 6.2 versions.
+
+* Thu Aug 04 2005 Charlie Brady <charlieb@e-smith.com> 7.0alpha27-01
+- Bump version to 7.0alpha27
 
 * Mon Jul 18 2005 Charlie Brady <charlieb@e-smith.com> 7.0alpha26-01
 - Bump version to 7.0alpha26
