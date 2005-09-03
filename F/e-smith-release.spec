@@ -1,6 +1,6 @@
 Summary: e-smith server and gateway release file
 Name: e-smith-release
-%define version 7.0beta3
+%define version 7.0beta4
 %define displayversion %{version}
 %define release 01
 Version: %{version}
@@ -21,6 +21,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Fri Sep 02 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta4
+- Bump version to 7.0beta4
+
 * Mon Aug 29 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta3-01
 - Bump version to 7.0beta3
 
