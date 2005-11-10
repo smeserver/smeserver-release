@@ -1,6 +1,6 @@
 Summary: e-smith server and gateway release file
 Name: e-smith-release
-%define version 7.0beta4
+%define version 7.0beta6
 %define displayversion %{version}
 %define release 01
 Version: %{version}
@@ -13,7 +13,7 @@ BuildArchitectures: noarch
 Epoch: 24
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 Requires: centos-release
-Obsoletes: redhat-logos, redhat-release, perl-RPM
+Obsoletes: perl-RPM
 Obsoletes: pident
 BuildRequires: perl, e-smith-devtools
 
@@ -21,6 +21,15 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Thu Oct 13 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta6
+- Bump version to 7.0beta6
+
+* Thu Sep 29 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta5-02
+- Remove Obsoletes for redhat-release and redhat-logs [SF: 1306025]
+
+* Thu Sep 15 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta5
+- Bump version to 7.0beta5
+
 * Fri Sep 02 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta4
 - Bump version to 7.0beta4
 
