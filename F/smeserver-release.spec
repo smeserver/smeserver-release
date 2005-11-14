@@ -2,7 +2,7 @@ Summary: SME Server release file
 Name: smeserver-release
 %define version 7.0beta6
 %define displayversion %{version}
-%define release 02
+%define release 03
 Version: %{version}
 Release: %{release}
 License: Mitel Networks Corporation
@@ -23,8 +23,8 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
-* Mon Nov 14 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta6-02
-- Package renamed to smeserver-release
+* Mon Nov 14 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta6-03
+- Package renamed to smeserver-release [SF: 1348712]
 
 * Thu Oct 13 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta6
 - Bump version to 7.0beta6
