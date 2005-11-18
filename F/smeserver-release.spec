@@ -1,14 +1,14 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.0beta6
+%define version 7.0beta7
 %define displayversion %{version}
-%define release 03
+%define release 01
 Version: %{version}
 Release: %{release}
-License: Mitel Networks Corporation
+License: GPL
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
-Packager: e-smith developers <bugs@e-smith.com>
+Packager: SME Server developers <bugteam@contribs.org>
 BuildArchitectures: noarch
 Epoch: 24
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
@@ -23,6 +23,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Mon Nov 14 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta7-01
+- Bump version to 7.0beta7
+
 * Mon Nov 14 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta6-03
 - Package renamed to smeserver-release [SF: 1348712]
 
