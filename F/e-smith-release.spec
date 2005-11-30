@@ -1,6 +1,6 @@
 Summary: e-smith server and gateway release file
 Name: e-smith-release
-%define version 7.0beta6
+%define version 7.0.0.11
 %define displayversion %{version}
 %define release 01
 Version: %{version}
@@ -21,6 +21,15 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Thu Nov 24 2005 Mark Knox <mark_knox@mitel.com> 7.0.0.11
+- Rolled to MSL 7.0.0.11 [MN00108175]
+
+* Fri Nov 11 2005 Mark Knox <mark_knox@mitel.com> 7.0.0.10
+- Rolled to MSL 7.0.0.10 [MN00105952]
+
+* Thu Oct 27 2005 Mark Knox <mark_knox@mitel.com> 7.0.0.8
+- Bump version to Mitel release numbering scheme
+
 * Thu Oct 13 2005 Charlie Brady <charlieb@e-smith.com> 7.0beta6
 - Bump version to 7.0beta6
 
