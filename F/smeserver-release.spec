@@ -2,7 +2,7 @@ Summary: SME Server release file
 Name: smeserver-release
 %define version 7.0beta9
 %define displayversion %{version}
-%define release 01
+%define release 02
 Version: %{version}
 Release: %{release}
 License: GPL
@@ -14,7 +14,9 @@ Epoch: 24
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 Requires: centos-release
 Obsoletes: e-smith-release
-Provides: e-smith-release
+Provides: e-smith-release = %{version}-%{release}
+Obsoletes: SMEServer
+Provides: SMEServer = %{version}-%{release}
 Obsoletes: perl-RPM
 Obsoletes: pident
 BuildRequires: perl, e-smith-devtools
@@ -23,6 +25,11 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Wed Dec 14 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta9-02
+- Obsolete/Provide SMEServer with version to match smeserver-release
+- Obsolete/Provide e-smith-release with version to match smeserver-release
+- [SME: 72]
+
 * Sat Nov 19 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta9-01
 - Bump version to 7.0beta9
 
