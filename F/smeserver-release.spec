@@ -1,8 +1,8 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.0beta9
+%define version 7.0pre1
 %define displayversion %{version}
-%define release 02
+%define release 01
 Version: %{version}
 Release: %{release}
 License: GPL
@@ -25,6 +25,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Thu Jan 5 2006 Gordon Rowell <gordonr@gormand.com.au> 7.0pre1-01
+- Bump to 7.0pre1
+
 * Wed Dec 14 2005 Gordon Rowell <gordonr@gormand.com.au> 7.0beta9-02
 - Obsolete/Provide SMEServer with version to match smeserver-release
 - Obsolete/Provide e-smith-release with version to match smeserver-release
