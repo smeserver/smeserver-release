@@ -1,6 +1,6 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.0rc2
+%define version 7.0rc3
 %define displayversion %{version}
 %define release 01
 Version: %{version}
@@ -25,6 +25,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Mon Jun 6 2006 Gordon Rowell <gordonr@gormand.com.au> 7.0rc3-01
+- Bump to rc2
+
 * Fri Apr 7 2006 Gordon Rowell <gordonr@gormand.com.au> 7.0rc2-01
 - Bump to rc2
 
