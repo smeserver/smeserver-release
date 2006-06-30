@@ -1,6 +1,6 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.0rc3
+%define version 7.0
 %define displayversion %{version}
 %define release 01
 Version: %{version}
@@ -10,7 +10,7 @@ Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
 Packager: SME Server developers <bugteam@contribs.org>
 BuildArchitectures: noarch
-Epoch: 24
+Epoch: 25
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 Requires: centos-release
 Obsoletes: e-smith-release
@@ -25,8 +25,11 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Fri Jun 30 2006 Gordon Rowell <gordonr@gormand.com.au> 7.0-01
+- Bump to 7.0
+
 * Mon Jun 6 2006 Gordon Rowell <gordonr@gormand.com.au> 7.0rc3-01
-- Bump to rc2
+- Bump to rc3
 
 * Fri Apr 7 2006 Gordon Rowell <gordonr@gormand.com.au> 7.0rc2-01
 - Bump to rc2
