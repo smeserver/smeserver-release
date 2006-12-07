@@ -2,13 +2,13 @@ Summary: SME Server release file
 Name: smeserver-release
 %define version 7.1beta1
 %define displayversion %{version}
-%define release 01
+%define release 2
 Version: %{version}
-Release: %{release}
+Release: %smerelease %{release}
+Packager: %{_packager}
 License: GPL
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
-Packager: SME Server developers <bugteam@contribs.org>
 BuildArchitectures: noarch
 Epoch: 25
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
@@ -25,6 +25,10 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
+- Update to new release naming.  No functional changes.
+- Make Packager generic
+
 * Thu Nov 30 2006 Gordon Rowell <gordonr@gormand.com.au> 7.1beta1-01
 - Bump to 7.1beta1
 
