@@ -2,13 +2,13 @@ Summary: e-smith server and gateway release file
 Name: e-smith-release
 %define version 7.0.0.11
 %define displayversion %{version}
-%define release 01
+%define release 2
 Version: %{version}
-Release: %{release}
+Release: %smerelease %{release}
+Packager: %{_packager}
 License: Mitel Networks Corporation
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
-Packager: e-smith developers <bugs@e-smith.com>
 BuildArchitectures: noarch
 Epoch: 24
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
@@ -21,6 +21,10 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
+- Update to new release naming.  No functional changes.
+- Make Packager generic
+
 * Thu Nov 24 2005 Mark Knox <mark_knox@mitel.com> 7.0.0.11
 - Rolled to MSL 7.0.0.11 [MN00108175]
 
