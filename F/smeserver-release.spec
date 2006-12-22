@@ -1,8 +1,8 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.1beta1
+%define version 7.1rc1
 %define displayversion %{version}
-%define release 2
+%define release 1
 Version: %{version}
 Release: %smerelease %{release}
 Packager: %{_packager}
@@ -25,6 +25,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Fri Dec 22 2006 Shad L. Lords <slords@mail.com> 7.1rc1-1
+- Bump to 7.1rc1
+
 * Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
 - Update to new release naming.  No functional changes.
 - Make Packager generic
