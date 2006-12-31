@@ -1,6 +1,6 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.1rc1
+%define version 7.1
 %define displayversion %{version}
 %define release 1
 Version: %{version}
@@ -10,7 +10,7 @@ License: GPL
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
 BuildArchitectures: noarch
-Epoch: 25
+Epoch: 26
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 Requires: centos-release
 Obsoletes: e-smith-release
@@ -25,6 +25,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Sun Dec 31 2006 Shad L. Lords <slords@mail.com> 7.1-1
+- Bump to 7.1
+
 * Fri Dec 22 2006 Shad L. Lords <slords@mail.com> 7.1rc1-1
 - Bump to 7.1rc1
 
