@@ -1,6 +1,6 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.1.1
+%define version 7.2
 %define displayversion %{version}
 %define release 1
 Version: %{version}
@@ -25,6 +25,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Fri Feb 16 2007 Shad L. Lords <slords@mail.com> 7.2-1
+- Bump to 7.2
+
 * Fri Jan 26 2007 Shad L. Lords <slords@mail.com> 7.1.1-1
 - Bump to 7.1.1
 
