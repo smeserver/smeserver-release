@@ -4,8 +4,7 @@ Name: smeserver-release
 %define displayversion %{version}
 %define release 1
 Version: %{version}
-Release: %smerelease %{release}
-Packager: %{_packager}
+Release: %{release}%{?dist}
 License: GPL
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
@@ -25,6 +24,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
+- Clean up spec so package can be built by koji/plague
+
 * Mon Apr 02 2007 Shad L. Lords <slords@mail.com> 7.2-1
 - Bump to 7.2
 
