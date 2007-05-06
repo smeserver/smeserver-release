@@ -4,8 +4,7 @@ Name: e-smith-release
 %define displayversion %{version}
 %define release 2
 Version: %{version}
-Release: %smerelease %{release}
-Packager: %{_packager}
+Release: %{release}%{?dist}
 License: Mitel Networks Corporation
 Group: System Environment/Base
 #Patch0: %{name}-%{version}.patch.yyyymmddnn
@@ -21,6 +20,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
+- Clean up spec so package can be built by koji/plague
+
 * Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
 - Update to new release naming.  No functional changes.
 - Make Packager generic
