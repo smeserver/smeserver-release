@@ -1,8 +1,13 @@
 Summary: SME Server release file
 Name: smeserver-release
-%define version 7.2
-%define displayversion %{version}
+%if "%{?rhel}" == "5"
+%define version 8.0
 %define release 1
+%else
+%define version 7.2
+%define release 2
+%endif
+%define displayversion %{version}
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -24,6 +29,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Wed May 9 2007 Shad L. Lords <slords@mail.com> 7.2-2/8.0-1
+- Updates to support SME Server 8
+
 * Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
 - Clean up spec so package can be built by koji/plague
 
