@@ -2,12 +2,12 @@ Summary: SME Server release file
 Name: smeserver-release
 %if "%{?rhel}" == "5"
 %define version 8.0
-%define release 1
+%define release 0.beta1
 %else
-%define version 7.2
-%define release 2
+%define version 7.3
+%define release 0.beta1
 %endif
-%define displayversion %{version}
+%define displayversion %{version}beta1
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -29,6 +29,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Tue Dec 11 2007 Shad L. Lords <slords@mail.com> 7.3-0/8.0-0
+- Update for beta releases of 7.3/8.0
+
 * Wed May 9 2007 Shad L. Lords <slords@mail.com> 7.2-2/8.0-1
 - Updates to support SME Server 8
 
