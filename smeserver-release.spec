@@ -1,3 +1,5 @@
+# $Id: smeserver-release.spec,v 1.4 2008/04/09 13:51:57 slords Exp $
+
 Summary: SME Server release file
 Name: smeserver-release
 %define version 8.0
