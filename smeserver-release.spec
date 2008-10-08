@@ -1,10 +1,10 @@
-# $Id: smeserver-release.spec,v 1.6 2008/09/21 19:57:32 slords Exp $
+# $Id: smeserver-release.spec,v 1.7 2008/10/08 17:38:21 slords Exp $
 
 Summary: SME Server release file
 Name: smeserver-release
 %define version 8.0
-%define release 0.beta2
-%define displayversion %{version}beta2
+%define release 0.beta3
+%define displayversion %{version}beta3
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
