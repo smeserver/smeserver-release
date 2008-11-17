@@ -1,10 +1,10 @@
-# $Id: smeserver-release.spec,v 1.8 2008/11/02 21:09:24 slords Exp $
+# $Id: smeserver-release.spec,v 1.9 2008/11/17 23:25:46 slords Exp $
 
 Summary: SME Server release file
 Name: smeserver-release
 %define version 7.4
-%define release 0.rc1
-%define displayversion %{version}rc1
+%define release 1
+%define displayversion %{version}
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -26,6 +26,9 @@ BuildRequires: perl, e-smith-devtools
 e-smith server and gateway release file
 
 %changelog
+* Mon Nov 17 2008 Shad L. Lords <slords@mail.com> 7.4-1
+- Update for releases of 7.4
+
 * Mon Jul 7 2008 Shad L. Lords <slords@mail.com> 7.4-0
 - Update for beta releases of 7.4
 
