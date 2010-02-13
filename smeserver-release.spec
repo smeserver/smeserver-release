@@ -1,4 +1,4 @@
-# $Id: smeserver-release.spec,v 1.9 2009/10/28 20:11:11 slords Exp $
+# $Id: smeserver-release.spec,v 1.10 2010/02/13 02:55:24 dungog Exp $
 
 Summary: SME Server release file
 Name: smeserver-release
@@ -27,13 +27,13 @@ e-smith server and gateway release file
 
 %changelog
 * Wed Oct 28 2009 Shad L. Lords <slords@mail.com> 8.0-0.beta5
-- Update for beta5 releases of 8.0.
+- Update for beta5 releases of 8.0. [SME: 3640]
 
 * Fri May 29 2009 Gavin Weight <gweight@gmail.com> 8.0-0.beta4
-- Update for beta4 releases of 8.0.
+- Update for beta4 releases of 8.0. [SME: 3640]
 
 * Tue Dec 11 2007 Shad L. Lords <slords@mail.com> 8.0-0
-- Update for beta releases of 8.0
+- Update for beta releases of 8.0 [SME: 3640]
 
 * Wed May 9 2007 Shad L. Lords <slords@mail.com> 7.2-2/8.0-1
 - Updates to support SME Server 8
